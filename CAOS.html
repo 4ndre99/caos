@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Pagamento das Cotas</title>
+    <meta charset="utf-8" />
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="page-header"><h2>Cotas CAOS<h2></div>
+        <form name="PersonData" action="http://192.168.160.36/FormEcho.aspx" method="post" class="form-horizontal">
+            <div class="form-group">
+                <label for="inputNome" class="col-sm-2 control-label">Nome</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputNome" placeholder="Nome" name="Nome">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputEndereco" class="col-sm-2 control-label">Endereço</label>
+                <div class="col-sm-10">
+                    <textarea rows="3" type="text" class="form-control" id="inputEndereco" placeholder="Endereco" name="Endereco"></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputEmail" class="col-sm-2 control-label">Email</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="inputEmail" placeholder="Email" name="Email">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="" class="col-sm-2 control-label">Place</label>
+                <div class="col-sm-10">
+                    <div class="checkbox">
+                        <label><input type="checkbox" value="100" id="inputOption1" name="Option1">Mestrado (100€)</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" value="80" id="inputOption2" name="Option2">Terceiro Ano (80€)</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" value="65" id="inputOption3" name="Option3">Segundo Ano (65€)</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" value="50" id="inputOption4" name="Option4">Primeiro Ano (50€)</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="" class="col-sm-2 control-label">Max</label>
+                <div class="col-sm-10">
+                    <input type="text" readonly="readonly" id="maxValue" name="maxValue" class="form-control-static" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-12 text-center">
+                    <button type="submit" class="btn btn-primary">Enviar!</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!-- Modal que vai ser usada apenas para apresentar erros -->
+    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" id="myModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-danger text-danger">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title"><i class="fa fa-exclamation-triangle"></i> Erros no formulário</h4>
+                </div>
+                <div class="modal-body">
+                    <ul></ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    <script src="../Scripts/jquery-3.3.1.min.js"></script>
+    <script src="../Scripts/bootstrap.min.js"></script>
+    <script src="CAOS.js"></script>
+</body>
+</html>
